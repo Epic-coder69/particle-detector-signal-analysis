@@ -1,64 +1,107 @@
 # Project Roadmap
 
 ## 1. Purpose
-Why I am doing this project:
-- learn experimental/computational plasma physics
-- work toward genuine research
-- build a strong scientific-computing portfolio for student jobs
+
+This project studies relationships between energetic-particle populations
+and magnetic-field structures in space plasma using real experimental data.
+
+The goals are to:
+
+- learn experimental and computational plasma physics
+- develop a reproducible scientific-analysis workflow
+- work toward genuine research questions
 
 ## 2. Scientific Direction
-Study the relationship between energetic particles and magnetic-field
-structures in the near-Sun plasma using Parker Solar Probe data.
 
-Initial question:
-Are energetic-particle enhancements associated with magnetic switchbacks
-or other magnetic structures?
+Main question:
 
-The project may later investigate whether observed relationships are better
-explained by particle acceleration, transport, magnetic connectivity, or
-other plasma processes.
+How are energetic-particle populations related to magnetic-field structures
+and magnetic variability in space plasma?
+
+Initial questions include:
+
+- Do energetic-particle enhancements coincide with changes in the magnetic field?
+- Do different particle energies respond differently?
+- Are particle enhancements associated with magnetic rotations, switchbacks,
+  turbulence, or other plasma structures?
+- Can these relationships be distinguished from random coincidence?
+
+If relationships are found, possible physical explanations may include:
+
+- particle acceleration
+- particle transport
+- magnetic connectivity
+- turbulence
+- common plasma or solar structures
+
+Correlation will not automatically be interpreted as evidence of local
+particle acceleration.
 
 Novelty is a goal, not an assumption.
 
-## 3. Data
-Primary measurements:
 
-- IS☉IS — energetic particles and their energy-dependent flux
+## 3. Experimental Data
+
+The current analysis uses Parker Solar Probe measurements.
+
+Primary instruments:
+
 - FIELDS — magnetic-field measurements
+- IS☉IS — energetic-particle measurements and energy-dependent flux
 
-Possible later addition:
-- SWEAP — bulk solar-wind plasma measurements
+## 4. Analysis Strategy
 
-Parker Solar Probe is the initial focus, but methods may later be applied
-to other plasma/particle datasets.
+The project follows this general progression:
 
-## 4. Approach
-1. Learn the relevant physics and understand the measurements.
-2. Start working with a small amount of real Parker data.
-3. Clean, synchronize, and visualize the measurements.
-4. Develop reliable event-detection methods.
-5. Identify magnetic structures such as switchbacks.
-6. Compare particle behavior around those structures.
-7. Test whether relationships are stronger than random coincidence.
-8. Interpret interesting results physically.
+1. Understand the instruments, measurements, units, cadence, and data quality.
+2. Identify useful particle-rich and reference intervals.
+3. Clean, synchronize, and visualize magnetic-field and particle measurements.
+4. Examine particle behavior as a function of energy and time.
+5. Quantify magnetic-field variability and directional changes.
+6. Identify magnetic structures such as rotations and candidate switchbacks.
+7. Compare particle populations before, during, and after those structures.
+8. Test whether observed relationships are statistically significant.
+9. Compare multiple events and control intervals.
+10. Interpret significant results physically.
 
-Synthetic data will remain useful for testing and validation, but real
-spacecraft data is the main project.
 
-## 5. What Success Looks Like
-The project should eventually produce:
+## 5. Current Stage
 
-- a working and reproducible scientific-analysis pipeline
-- analysis of real Parker Solar Probe measurements
-- quantitative results with uncertainties and statistical controls
+The initial Parker Solar Probe data pipeline is working.
+
+So far the project has:
+
+- loaded and inspected real NASA CDF data
+- verified measurement cadence and data coverage
+- distinguished valid zero-count measurements from missing data
+- analyzed FIELDS magnetic-field measurements
+- analyzed IS☉IS proton measurements
+- identified a particle-rich interval on 2018-11-17
+- compared it with a lower-activity interval on 2018-11-06
+- produced synchronized magnetic-field and proton-activity plots
+- produced an energy-resolved proton-flux spectrogram
+
+The next step is to move from visual comparison to quantitative
+particle-field analysis.
+
+
+## 6. What Success Looks Like
+
+A successful project should produce:
+
+- a reproducible analysis pipeline
+- scientifically justified data handling
+- quantitative particle-field comparisons
+- uncertainty estimates and statistical controls
 - clear scientific figures
-- documented code on GitHub
-- a research-style explanation/report of the method and results
+- documented Python code
+- a research-style interpretation of the results
 
 A successful project does not require discovering new physics.
-Reproducing known results, testing hypotheses rigorously, or obtaining a
-well-supported null result are all valid outcomes.
+
+Reproducing known behavior, testing a hypothesis rigorously, finding a
+statistically significant relationship, or obtaining a well-supported null
+result are all valid scientific outcomes.
 
 If the analysis reveals a potentially new relationship, it can become the
 basis for deeper research.
-

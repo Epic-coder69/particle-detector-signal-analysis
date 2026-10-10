@@ -62,18 +62,3 @@ well-supported null result are all valid outcomes.
 If the analysis reveals a potentially new relationship, it can become the
 basis for deeper research.
 
-## 6. Current Status and Next Steps
-Already completed:
-- synthetic detector-signal simulation
-- noise and SNR studies
-- event detection
-- pulse reconstruction
-- Monte Carlo performance studies
-- Git/GitHub setup
-
-Next:
-1. finish this roadmap
-2. understand the relevant Parker instruments/data products
-3. obtain a small real IS☉IS/FIELDS dataset
-4. make our first real-data plots
-5. decide the first concrete analysis from what we learn
